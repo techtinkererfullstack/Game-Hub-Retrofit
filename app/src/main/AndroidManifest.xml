@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GameHubRetrofit">
         <activity
+            android:name=".GameDetails"
+            android:exported="false" />
+        <activity
+            android:name=".GameList"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
