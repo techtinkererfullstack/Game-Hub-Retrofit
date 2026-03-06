@@ -1,4 +1,3 @@
-
 import java.util.Properties
 
 // Load properties from local.properties
@@ -14,6 +13,10 @@ plugins {
 }
 
 android {
+    buildFeatures {
+        viewBinding = true
+    }
+
     namespace = "com.example.game_hub_retrofit"
     compileSdk {
         version = release(36) {
@@ -34,15 +37,13 @@ android {
         val apiKey = properties.getProperty("MY_API_KEY") ?: ""
         buildConfigField("String", "API_KEY", "\"$apiKey\"")
 
-
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
         }
     }
@@ -61,4 +62,21 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // OkHttp Logging
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
+
+    // Coroutines (optional)
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    // Glide
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+    implementation("com.google.android.material:material:1.12.0")
+
 }
