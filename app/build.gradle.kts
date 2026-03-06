@@ -1,3 +1,14 @@
+
+import java.util.Properties
+
+// Load properties from local.properties
+val properties = Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    properties.load(localPropertiesFile.inputStream())
+}
+
+
 plugins {
     alias(libs.plugins.android.application)
 }
@@ -18,6 +29,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // Inject the API key into BuildConfig
+        val apiKey = properties.getProperty("MY_API_KEY") ?: ""
+        buildConfigField("String", "API_KEY", "\"$apiKey\"")
+
+
     }
 
     buildTypes {
