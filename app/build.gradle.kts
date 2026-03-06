@@ -1,11 +1,8 @@
-import java.util.Properties
+//import java.io.FileInputStream
+//import java.util.Properties
 
 // Load properties from local.properties
-val properties = Properties()
-val localPropertiesFile = rootProject.file("local.properties")
-if (localPropertiesFile.exists()) {
-    properties.load(localPropertiesFile.inputStream())
-}
+
 
 
 plugins {
@@ -15,6 +12,7 @@ plugins {
 android {
     buildFeatures {
         viewBinding = true
+//        buildConfig = true
     }
 
     namespace = "com.example.game_hub_retrofit"
@@ -33,9 +31,18 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        // Inject the API key into BuildConfig
-        val apiKey = properties.getProperty("MY_API_KEY") ?: ""
-        buildConfigField("String", "API_KEY", "\"$apiKey\"")
+//        // 2. Load the properties file
+//        val properties = Properties().apply {
+//            val propertiesFile = rootProject.file("local.properties")
+//            if (propertiesFile.exists()) {
+//                load(FileInputStream(propertiesFile))
+//            }
+//        }
+//
+//        // 3. Get the key and inject it
+//        // Use escaped quotes \" for String values in BuildConfig
+//        val apiKey = properties.getProperty("MY_SECRET_KEY") ?: ""
+//        buildConfigField("String", "API_KEY", "\"$apiKey\"")
 
     }
 
@@ -78,5 +85,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
     implementation("com.google.android.material:material:1.12.0")
+
+
 
 }

@@ -107,44 +107,44 @@
                 android:textStyle="bold" />
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="1"
-                android:layout_marginTop="12dp"
-                android:gravity="center">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:weightSum="1"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:gravity="center">-->
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/gameScore"
-                    style="@style/Widget.Material3.Button.OutlinedButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".5"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="12dp"
-                    android:text="+ 383"
-                    android:textSize="12sp"
-                    android:layout_marginEnd="150dp"
-                    android:textColor="?attr/colorOnSurface"
-                    app:cornerRadius="8dp" />
+<!--                <com.google.android.material.button.MaterialButton-->
+<!--                    android:id="@+id/gameScore"-->
+<!--                    style="@style/Widget.Material3.Button.OutlinedButton"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight=".5"-->
+<!--                    android:paddingStart="12dp"-->
+<!--                    android:paddingEnd="12dp"-->
+<!--                    android:text="+ 383"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:layout_marginEnd="150dp"-->
+<!--                    android:textColor="?attr/colorOnSurface"-->
+<!--                    app:cornerRadius="8dp" />-->
 
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/gameScore"
-                    style="@style/Widget.Material3.Button.OutlinedButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".5"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="12dp"
-                    android:text="Action"
-                    android:textSize="12sp"
-                    android:backgroundTint="?attr/colorOnSurface"
-                    android:textColor="?attr/colorOnBackground"
-                    app:cornerRadius="8dp" />
+<!--                <com.google.android.material.button.MaterialButton-->
+<!--                    android:id="@+id/gameCategory"-->
+<!--                    style="@style/Widget.Material3.Button.OutlinedButton"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight=".5"-->
+<!--                    android:paddingStart="12dp"-->
+<!--                    android:paddingEnd="12dp"-->
+<!--                    android:text="Action"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:backgroundTint="?attr/colorOnSurface"-->
+<!--                    android:textColor="?attr/colorOnBackground"-->
+<!--                    app:cornerRadius="8dp" />-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
 
 
